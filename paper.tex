@@ -1,0 +1,179 @@
+\maketitle
+\tableofcontents
+
+
+\begin{abstract}
+This is the abstract.
+\end{abstract}
+
+
+The bibliography file has a relatively recent copy of everything jovo has ever cited, including~\citet{Vogelstein2019-om}.
+
+\lipsum[1-2]
+
+\section{This is a section}
+% @jlp: the first paragraph after the start of a new section/subsection should not be indented.
+The quick brown fox jumps over the lazy dog Eq.~\eqref{eq:1}.
+
+\emph{The quick brown fox jumps over the lazy dog} \cite{article,book,book2, inproceedings,incollection,thesis, unpublished, conference}.
+% @jlp: make references gray (why should they get so much attention, they are not even our work!).
+
+\textbf{The quick brown fox jumps over the lazy dog} Figure \ref{fig:lion}.
+
+\emph{\textbf{The quick brown fox jumps over the lazy dog}.  \citet{article}}
+
+\sct{The quick brown fox jumps over the lazy dog.}\todo{Add cats}
+
+The quick brown fox jumps over the \url{lazy} \href{https://en.wikipedia.org/wiki/Dog}{dog}.
+
+
+% @jlp: make below shortcuts work:
+The \dele{quick} \rep{brown}{chartreuse} fox jumps over the lazy \add{ass} dog
+
+
+Aligned equation:
+\begin{align} \label{eq:1}
+e^{i\pi} +1 &= 0,\\
+\chi &= V - E + F\T
+\end{align}
+
+
+% \newpage
+% @jlp: itemize and enumerate start on the left side the same place as regular non-indented text.
+Enumerate:
+\begin{enumerate}
+  \item The quick brown fox jumps over the lazy dog
+  \item The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+\end{enumerate}
+
+Itemize:
+\begin{itemize}
+  \item The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+  \item The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+\end{itemize}
+
+
+Description:
+\begin{description}
+  \item[The] The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+  \item[Quick] brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog.
+\end{description}
+
+
+% \newpage
+% @jlp: default table respects the page margins
+% @jovo: that is the resposbibility of the author on a per table basis.
+\begin{table}[!ht]
+% \begin{center}
+% \footnotesize
+\caption{Table.}
+\label{tab:task}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+ \textbf{Metrics} & Sub & \textbf{Phase 1} & \textbf{Phase 2} \\
+\hhline{|====|}
+\multicolumn{4}{|c|}{1}\\
+%\ref{task:I}
+ \hhline{|====|}
+The & quick & brown  & fox \\
+\hline
+\end{tabular}
+\normalsize
+% \end{center}
+\end{table}
+%\begin{wraptable}{r}{0.6\linewidth}
+\begin{table*}[!ht]
+\centering
+\caption{The median sample size for each method to achieve power $85\%$ at type 1 error level $0.05$, grouped into monotone (type 1-5) and non-monotone simulations (type 6-19) for both one- and ten-dimensional settings, normalized by the number of samples required by \Mgc. In other words, a $2.0$ indicates that the method requires double the sample size to achieve $85\%$ power relative to \Mgc.   \Pearson, \RV, and \CCA~all achieve the same performance, as do \Spearman~and \Kendall.
+\Mgc~requires the fewest number of samples in all settings, and on average for high-dimensional settings, all other methods require about two to three times  more samples than \Mgc.}
+\label{tab:power}%
+\begin{tabular}{*7l}
+\toprule
+Dimensionality&\multicolumn{3}{c}{One-Dimensional} & \multicolumn{3}{c}{Ten-Dimensional} \\
+Dependency Type & Monotone & Non-Mono & Average & Monotone & Non-Mono&   Average \\
+\midrule
+ \Mgc  	& \textbf{1}  & \textbf{1} & \textbf{1} &\textbf{1} & \textbf{1} & \textbf{1} \\
+  \Dcorr & \textbf{1}  & 2.6 & 2.2 &\textbf{1}  & 3.2 & 2.6\\
+ \Mcorr	& \textbf{1}  & 2.8 & 2.4 &\textbf{1} & 3.1  & 2.6 \\
+ \Hhg 	& 1.4  			 & \textbf{1} & 1.1 & 1.7  & 1.9 & 1.8  \\
+\Hsic 		& 1.4  			& 1.1 & 1.2 & 1.7 & 2.4 & 2.2 \\
+ \Mantel & 1.4  			& 1.8 & 1.7 & 3 & 1.6 & 1.9\\
+\Pearson~/ \RV~/ \CCA & \textbf{1}  & >10 & >10 & \textbf{0.8} & >10 & >10 \\
+\Spearman~/ \Kendall & \textbf{1}  			& >10 & >10 & n/a & n/a & n/a\\
+\Mic & 2.4  																& 2 & 2.1 & n/a & n/a & n/a\\
+%  Oracle \Mgc  & \textbf{50}  & 60 & \textbf{70} & \textbf{135} \\
+% \Mgc  & \textbf{50}  & 60 & \textbf{90} & \textbf{165} \\
+%  \Dcorr & \textbf{50}  & 60 & 235 & 535\\
+% \Mcorr& \textbf{50}  & 60 & 250 & 515 \\
+% \Hhg & 70  & 100 & \textbf{90} & 315  \\
+%\Hsic & 70  & 100 & 95 & 400 \\
+% \Mantel & 70  & 180 & 165 & 270\\
+%\Pearson~/ \RV~/ \CCA & \textbf{50}  & \textbf{50} & >1000 & >1000 \\
+%\Spearman~/ \Kendall & \textbf{50}  & n/a & >1000 & n/a \\
+%\Mic & 120  & n/a & 180 & n/a\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+
+\section{Tasks section}
+
+\task{Research}
+\lipsum[1]
+\task{Development}
+\lipsum[2]
+\task{Integration}
+\lipsum[3]
+\task{Dissemination}
+\lipsum[4]
+
+
+\subsection{This is a subsection}
+The quick brown fox jumps over the lazy dog.
+
+\subsubsection{This is a subsubsection}
+The quick brown fox jumps over the lazy dog.
+
+\paragraph{This is a paragraph}
+The quick brown fox jumps over the lazy dog.
+
+\subparagraph{This is a subparagraph}
+The quick brown fox jumps over the lazy dog.
+
+\begin{figure}[h!!!]
+\centering
+\includegraphics[width=0.25\textwidth]{lion_parrots.JPG}
+  \caption{Lion is awesome.}
+\label{fig:lion}
+\end{figure}
+\eject
+
+
+
+\begin{algorithm}
+\caption{\Mgc~test statistic. This algorithm computes all local correlations, take the smoothed maximum, and reports the $(k,l)$ pair that achieves it. For the smoothing step, it: (i) finds the largest connected region in the correlation map, such that each correlation is significant, i.e., larger than a certain threshold to avoid correlation inflation by sample noise, (ii) take the largest correlation in the region, (iii) if the region area is too small, or the smoothed maximum is no larger than the global correlation, the global correlation is used instead. The running time is $\mc{O}(n^2)$.}
+\label{alg:sample_mgc}
+\begin{algorithmic}[1]
+\Require A pair of distance matrices $(A, B) \in \Real^{n \times n} \times \Real^{n \times n}$.
+\Ensure The \Mgc~statistic $\GG^{*} \in \Real$, all local statistics $\mathcal{C} \in \Real^{n \times n}$, and the corresponding local scale $(k,l) \in \mathbb{N} \times \mathbb{N}$.
+\Function{MGCSampleStat}{$A,B$}
+\State $\mathcal{C}=\textsc{MGCAllLocal}(A,B)$ \Comment{All local correlations}
+\State $\tau = \textsc{Thresholding}(\mathcal{C})$ \Comment{find a threshold to determine large local correlations}
+\Linefor{$i,j := 1,\ldots, n$}{$r_{ij} \rto \mathbb{I} (c^{ij} > \tau )$} \Comment{identify all scales with large correlation}
+\State $\mathcal{R} \rto \{r_{ij} : i,j = 1,\ldots, n\}$ \Comment{binary map encoding  scales with large correlation}
+\State $\mathcal{R}  = \textsc{Connected}(\mathcal{R} )$ \Comment{largest connected component of the binary matrix}
+\State $\GG^{*} \rto \mathcal{C}(n,n)$ \Comment{use the global correlation by default}
+\State $k \rto n, l \rto n$
+\If{$\left(\sum_{i,j} r_{ij}\right) \geq 2n $} \Comment{proceed when the significant region is sufficiently large}
+\State $[\GG^{*},k,l] \rto \max (\mathcal{C} \circ \mathcal{R})$ \Comment{find the smoothed maximum and the respective scale}
+\EndIf
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+
+
+\section{Second \textsection\, so that we have more things in the TOC}
+\lipsum[4]
+\subsection{Second \textsection\textsection\, so that we have more things in the TOC}
+\lipsum[5]
