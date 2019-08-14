@@ -4,11 +4,24 @@
 
 \title{Template}
 
-\author[1,2]{Joshua T.~Vogelstein\thanks{jovo@jhu.edu}}
-\author[2]{Jesse Patsolic}
-\affil[1]{Department of Biomedical Engineering, Institute for Computational Medicine, Kavli~Neuroscience~Discovery Institute, Johns Hopkins University}
-\affil[2]{University of Something Else}
+%\author[1,2]{Joshua T.~Vogelstein\thanks{jovo@jhu.edu}}
+%\author[2]{Jesse Patsolic}
+%\affil[1]{Department of Biomedical Engineering, Institute for Computational Medicine, Kavli~Neuroscience~Discovery Institute, Johns Hopkins University}
+%\affil[2]{University of Something Else}
 
+
+\author{%
+    Joshua T.~Vogelstein\endnotemark[1]$^,$\endnotemark[2]\thanks{jovo@jhu.edu},
+    \and
+    Jesse Patsolic\endnotemark[2]$^,$\endnotemark[3]
+}
+
+%\affil[1]{Department of Biomedical Engineering, Institute for Computational Medicine, Kavli~Neuroscience~Discovery Institute, Johns Hopkins University}
+%\affil[2]{University of Something Else}
+%
+\endnotetext[1]{Department of Biomedical Engineering, Institute for Computational Medicine, Kavli~Neuroscience~Discovery Institute, Johns Hopkins University}
+\endnotetext[2]{University of Something Else}
+\endnotetext[3]{University of This and That}
 
 
 \begin{document}
@@ -22,6 +35,7 @@
 \bibliographystyle{unsrtnat}
 \bibliography{jovo_all_bib.bib,template.bib}
 
+\theendnotes
 
 \end{document}
 

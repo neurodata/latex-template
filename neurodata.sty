@@ -31,7 +31,8 @@
 \usepackage[sort&compress,comma,square,numbers]{natbib}
 
 %%% For author, thanks, affil
-\usepackage[noblocks]{authblk}
+%\usepackage[noblocks]{authblk}
+\usepackage{endnotes}
 
 %%% For begin{algorithm}
 \usepackage{algorithm}
@@ -167,7 +168,6 @@
 \renewenvironment{abstract}{\bfseries}{}
 
 \makeatletter
-
 \renewcommand\@maketitle{%
   %\vspace{-25pt}
   \noindent
@@ -175,11 +175,14 @@
 	  \color{JHBlue} {\bfseries\LARGE{{\@title \par \hfill}}}
   \par
   \color{gray}{
-    %\vspace{-15pt} 
-    \@author
+    %\vspace{-15pt}
+    \begin{tabular}[t]{c}%
+        \@author
+    \end{tabular}
     }
   }
 }
+\makeatother
 
 
 %%%%%%%%%%% EDITING MACROS %%%%%%%%%%%%%
