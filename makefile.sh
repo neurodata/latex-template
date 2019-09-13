@@ -1,5 +1,5 @@
-LATEX = xelatex
-TEX = latex-template
+LATEX = pdflatex
+TEX = main
 BIBTEX = bibtex
 
 default: $(TEX).tex
