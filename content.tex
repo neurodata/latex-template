@@ -6,10 +6,67 @@
 This is the abstract.
 \end{abstract}
 
+\section{Section} \lipsum[1]
+\subsection{Subsection} \lipsum[1]
+\subsubsection{Subsubsection} \lipsum[1]
+\paragraph{Paragraph} \lipsum[1]
+\subparagraph{Subparagraph} \lipsum[1]
 
-The bibliography file has a relatively recent copy of everything jovo has ever cited, including~\citet{Vogelstein2019-om}.
+\begin{theorem}
+A=b.
+\end{theorem}
 
-\lipsum[1-2]
+
+\begin{algorithm}
+\caption{\Mgc~test statistic. This algorithm computes all local correlations, take the smoothed maximum, and reports the $(k,l)$ pair that achieves it. For the smoothing step, it: (i) finds the largest connected region in the correlation map, such that each correlation is significant, i.e., larger than a certain threshold to avoid correlation inflation by sample noise, (ii) take the largest correlation in the region, (iii) if the region area is too small, or the smoothed maximum is no larger than the global correlation, the global correlation is used instead. The running time is $\mc{O}(n^2)$.}
+\label{alg:sample_mgc}
+\begin{algorithmic}[1]
+\Require A pair of distance matrices $(A, B) \in \Real^{n \times n} \times \Real^{n \times n}$.
+\Ensure The \Mgc~statistic $\GG^{*} \in \Real$, all local statistics $\mathcal{C} \in \Real^{n \times n}$, and the corresponding local scale $(k,l) \in \mathbb{N} \times \mathbb{N}$.
+\Function{MGCSampleStat}{$A,B$}
+\State $\mathcal{C}=\textsc{MGCAllLocal}(A,B)$ \Comment{All local correlations}
+\State $\tau = \textsc{Thresholding}(\mathcal{C})$ \Comment{find a threshold to determine large local correlations}
+\Linefor{$i,j := 1,\ldots, n$}{$r_{ij} \rto \mathbb{I} (c^{ij} > \tau )$} \Comment{identify all scales with large correlation}
+\State $\mathcal{R} \rto \{r_{ij} : i,j = 1,\ldots, n\}$ \Comment{binary map encoding  scales with large correlation}
+\State $\mathcal{R}  = \textsc{Connected}(\mathcal{R} )$ \Comment{largest connected component of the binary matrix}
+\State $\GG^{*} \rto \mathcal{C}(n,n)$ \Comment{use the global correlation by default}
+\State $k \rto n, l \rto n$
+\If{$\left(\sum_{i,j} r_{ij}\right) \geq 2n $} \Comment{proceed when the significant region is sufficiently large}
+\State $[\GG^{*},k,l] \rto \max (\mathcal{C} \circ \mathcal{R})$ \Comment{find the smoothed maximum and the respective scale}
+\EndIf
+\EndFunction
+\Statex
+\Require $\mathcal{C} \in \Real^{n \times n}$.
+\Ensure A threshold $\tau$ to identify large correlations.
+\Function{Thresholding}{$\mathcal{C}$}
+\State $\tau \rto \sum_{\GG^{ij}<0} (\GG^{ij})^2 / \sum_{\GG^{ij}<0} 1$ \Comment{variance of all negative local generalized correlations}
+\State $\tau \rto \max\{0.01,\sqrt{\tau}\} \times 3.5$ \Comment{threshold based on negative correlations}
+% \State $\tau_{2} \rto 2/n$
+\State $\tau \rto \max\{\tau,2/n, \GG^{nn}\}$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+
+
+The bibliography file has a relatively recent copy of everything jovo has ever cited, including~\citet{Vogelstein2019-om}, \url{https://jovo.me}.
+
+% \lipsum[1-2]
+
+Some general guidelines:
+\begin{itemize}
+    \item When using quotes, do not use the double quote symbol, rather use two \href{https://en.wikipedia.org/wiki/Grave_accent}{grave accent's} to start the quote, and two single quotes to end it.
+    \item Put all figures in a 
+    \begin{verbatim}
+        \begin{figure}
+    \end{verbatim}
+    environment.
+    \item Put all tables in a 
+    \begin{verbatim}
+        \begin{table}
+    \end{verbatim}
+    environment.
+\end{itemize}
 
 \section{This is a section}
 % @jlp: the first paragraph after the start of a new section/subsection should not be indented.
@@ -20,7 +77,7 @@ The quick brown fox jumps over the lazy dog Eq.~\eqref{eq:1}.
 
 \textbf{The quick brown fox jumps over the lazy dog} Figure \ref{fig:lion}.
 
-\emph{\textbf{The quick brown fox jumps over the lazy dog}.  \citet{article}}
+\emph{\textbf{The quick brown fox jumps over the lazy dog}.}  \citet{article}
 
 \sct{The quick brown fox jumps over the lazy dog.}\todo{Add cats}
 

@@ -1,34 +1,38 @@
-\documentclass{article}
-\usepackage{neurodata}
-\input{preamble.tex}
+\documentclass[onefignum, onetabnum,onealgnum, onethmnum, oneeqnum]{siamonline190516}
+\input{nd_preamble.tex}
 
 \title{Template}
 
-\author{%
-    Joshua T.~Vogelstein\endnotemark[0]$^,$\endnotemark[1]$^,$\endnotemark[2],
-    \and
-    Jesse Patsolic\endnotemark[2]$^,$\endnotemark[3]
-}
 
-\endnotetext[0]{Corresponding author: \href{mailto:jovo@jhu.edu}{jovo@jhu.edu}}
-\endnotetext[1]{Department of Biomedical Engineering, Institute for Computational Medicine, \\
-    \indent Kavli~Neuroscience~Discovery Institute, Johns Hopkins University}
-\endnotetext[2]{University of Something Else}
-\endnotetext[3]{University of This and That}
+%%  Authors: full names plus addresses.
+\author{%
+    Jesse L. Patsolic$^1$, and %
+    Joshua T. Vogelstein$^{1.2}$%
+    \thanks{Corresponding author: 
+    \href{mailto:jovo@jhu.edu}{jovo@jhu.edu}
+        $^1$ Center for Imaging Science, 
+        Johns Hopkins University
+        $^2$ Department of Biomedical Engineering,
+        Institute for Computational Medicine,
+        Kavli~Neuroscience~Discovery Institute,
+        Johns Hopkins University
+    } 
+}
 
 
 \begin{document}
 
-\input{text.tex}
+
+\input{content.tex}
 
 
 
 \clearpage
 
 \bibliographystyle{unsrtnat}
-\bibliography{jovo_all_bib.bib,template.bib}
+\bibliography{jovo_all_bib,template}
 
-\theendnotes
+%\theendnotes
 
 \end{document}
 
