@@ -54,7 +54,6 @@
 %%% mathfonts, equation environments and eqref, ...
 \usepackage{amsfonts,amsmath,amssymb}
 \usepackage{bbm}
-\usepackage{xspace}
 
 %%% For enumitem with special global options
 \usepackage{multicol}
@@ -103,21 +102,6 @@
 }
 
 
-\usepackage[super]{nth}
-\usepackage{mdframed}
-\mdfdefinestyle{MyFrame}{%
-    % linecolor=blue,
-    outerlinewidth=6pt,
-    roundcorner=20pt,
-    innertopmargin=\baselineskip,
-    innerbottommargin=\baselineskip,
-    innerrightmargin=20pt,
-    innerleftmargin=20pt %,
-    % backgroundcolor=gray!50!white
-    }
-
-% \usepackage[linecolor=darkBlue, linewidth=1.5pt, skipabove=4pt, nobreak=true]{mdframed}
-
 
 %%%%%%%%%% ENVIRONMENTS %%%%%%%%%%%%%
 % \RequirePackage{amsthm}
@@ -129,7 +113,6 @@
 \newtheorem{lem}{Lemma}
 \newtheorem{Lem}{Lemma}%[section]
 \newtheorem{defi}{Definition}
-\newtheorem{quo}{Quote}
 \newtheorem{Def}{Definition}[section]
 \newtheorem{example}{Example}[section]
 \newtheorem{prop}{Proposition}
@@ -184,29 +167,15 @@
 \newcommand{\RV}{\sct{RV}}
 \newcommand{\CCA}{\sct{Cca}}
 \newcommand{\Sporf}{\sct{Sporf}}
-\newcommand{\Mf}{\sct{Mf}}
-\newcommand{\MF}{\sct{RF}}
+\newcommand{\Morf}{\sct{Morf}}
+\newcommand{\Mf}{\sct{Morf}}
 \newcommand{\ICC}{\sct{ICC}}
 \newcommand{\Rf}{{\sc \texttt{RF}}}
-\newcommand{\UF}{{\sc \texttt{UF}}}
 \newcommand{\Ccf}{{\sc \texttt{CCF}}}
 \newcommand{\Rrrf}{{\sc \texttt{RR-RF}}}
 \newcommand{\Xgboost}{{\sc \texttt{XGBoost}}}
 \newcommand{\Frc}{{\sc \texttt{F-RC}}}
-\renewcommand{\ICC}{\sct{ICC}}
-\newcommand{\discr}{\sct{Discr}}
-\renewcommand{\PICC}{\sct{PICC}}
-\renewcommand{\ITCT}{\sct{I2Cw}}
 
-
-
-
-%%%%%%% NUMERICAL PACKAGES  %%%%%%%%%%%%
-\newcommand{\graspy}{\texttt{GraSPy}\xspace}
-\newcommand{\sklearn}{\texttt{scikit-learn}\xspace}
-\newcommand{\networkx}{\texttt{NetworkX}\xspace}
-\newcommand{\graphtool}{\texttt{graph-tool}\xspace}
-\newcommand{\snap}{\texttt{Snap.py}\xspace}
 
 %%%%%%% MATH OPERATORS %%%%%%%%%%%%
 \providecommand{\ve}[1]{\boldsymbol{#1}}
